@@ -1,0 +1,111 @@
+{
+  "app:go-back": [
+    {
+      "key": "ArrowLeft",
+      "modifiers": [
+        "Alt"
+      ]
+    }
+  ],
+  "app:go-forward": [
+    {
+      "key": "ArrowRight",
+      "modifiers": [
+        "Alt"
+      ]
+    }
+  ],
+  "app:open-help": [],
+  "app:open-settings": [],
+  "command-palette:open": [
+    {
+      "key": " ",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
+  "editor:delete-paragraph": [],
+  "editor:follow-link": [],
+  "editor:insert-link": [],
+  "editor:open-link-in-new-leaf": [],
+  "editor:open-link-in-new-split": [],
+  "editor:open-link-in-new-window": [],
+  "editor:open-search": [],
+  "editor:open-search-replace": [],
+  "editor:save-file": [],
+  "editor:toggle-bold": [],
+  "editor:toggle-checklist-status": [],
+  "editor:toggle-comments": [],
+  "editor:toggle-italics": [],
+  "file-explorer:new-file": [],
+  "file-explorer:new-file-in-new-pane": [],
+  "global-search:open": [
+    {
+      "key": "/",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
+  "graph:open": [],
+  "markdown:add-metadata-property": [],
+  "markdown:toggle-preview": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "I"
+    }
+  ],
+  "spacekeys:leader": [
+    {
+      "key": " ",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
+  "table-editor-obsidian:table-control-bar": [],
+  "templater-obsidian:create-new-note-from-template": [],
+  "templater-obsidian:insert-templater": [],
+  "templater-obsidian:jump-to-next-cursor-location": [],
+  "templater-obsidian:replace-in-file-templater": [],
+  "workspace:close": [],
+  "workspace:close-window": [],
+  "workspace:edit-file-title": [],
+  "workspace:goto-last-tab": [
+    {
+      "key": "`",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
+  "workspace:goto-tab-1": [],
+  "workspace:goto-tab-2": [],
+  "workspace:goto-tab-3": [],
+  "workspace:goto-tab-4": [],
+  "workspace:goto-tab-5": [],
+  "workspace:goto-tab-6": [],
+  "workspace:goto-tab-7": [],
+  "workspace:goto-tab-8": [],
+  "workspace:next-tab": [
+    {
+      "key": "Tab",
+      "modifiers": [
+        "Ctrl"
+      ]
+    }
+  ],
+  "workspace:previous-tab": [
+    {
+      "key": "Tab",
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ]
+    }
+  ],
+  "workspace:undo-close-pane": []
+}

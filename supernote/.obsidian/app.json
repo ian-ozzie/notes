@@ -1,0 +1,25 @@
+{
+  "attachmentFolderPath": "./attachments",
+  "defaultViewMode": "source",
+  "livePreview": false,
+  "newFileFolderPath": "unsorted",
+  "newFileLocation": "folder",
+  "pdfExportSettings": {
+    "downscalePercent": 100,
+    "landscape": false,
+    "margin": "0",
+    "pageSize": "A4"
+  },
+  "promptDelete": false,
+  "trashOption": "system",
+  "vimMode": true,
+  "autoConvertHtml": true,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "readableLineLength": false,
+  "showInlineTitle": false,
+  "strictLineBreaks": true,
+  "useMarkdownLinks": true,
+  "useTab": false,
+  "userIgnoreFilters": []
+}

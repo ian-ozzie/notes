@@ -1,0 +1,5 @@
+div[data-path="templates"],
+div[data-path="templates"] + div.nav-folder-children
+{
+    display: none;
+}
