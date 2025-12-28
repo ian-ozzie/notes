@@ -1,0 +1,11 @@
+.callout-content > *:last-child {
+    margin-bottom: 0;
+}
+
+.callout {
+    padding-left: var(--size-4-3);
+}
+
+.callout .callout {
+    margin-top: 0;
+}
