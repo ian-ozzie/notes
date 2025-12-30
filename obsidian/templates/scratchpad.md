@@ -7,3 +7,7 @@
 ## Bookmarks
 
 ![Reminders](bookmarks.base#Reminders)
+
+## Tasks
+
+![Tasks](tasks.base#Due)

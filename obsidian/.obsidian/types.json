@@ -14,6 +14,10 @@
     "cssclasses": "multitext",
     "focus": "text",
     "tags": "tags",
+    "task/due": "date",
+    "task/for": "text",
+    "task/priority": "number",
+    "task/status": "text",
     "title": "text",
     "type": "text",
     "updated": "date"

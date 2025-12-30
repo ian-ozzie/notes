@@ -1,0 +1,153 @@
+create:
+  path: bases/tasks
+  name: datetime:YYYY-MM-DD_HH-mm-ss
+  template: task
+filters:
+  and:
+    - type == "task"
+    - file.name != "task"
+properties:
+  note.archived:
+    displayName: archived
+  note.title:
+    displayName: title
+  note.task/due:
+    displayName: due
+  note.task/priority:
+    displayName: priority
+  note.task/status:
+    displayName: status
+views:
+  - type: table
+    name: Not Archived
+    filters:
+      and:
+        - note["archived"] != true
+    order:
+      - archived
+      - file.name
+      - task/priority
+      - task/due
+      - task/status
+      - tags
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: task/priority
+        direction: DESC
+      - property: task/status
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.task/priority: 50
+      note.task/due: 125
+      note.task/status: 100
+      note.tags: 150
+  - type: table
+    name: All
+    order:
+      - archived
+      - file.name
+      - task/priority
+      - task/due
+      - task/status
+      - tags
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: task/priority
+        direction: DESC
+      - property: task/status
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.task/priority: 50
+      note.task/due: 125
+      note.task/status: 100
+      note.tags: 150
+  - type: table
+    name: Due
+    filters:
+      and:
+        - note["archived"] != true
+        - note["task/due"] <= now()
+    order:
+      - archived
+      - file.name
+      - task/priority
+      - task/due
+      - task/status
+      - tags
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: task/priority
+        direction: DESC
+      - property: task/status
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.task/priority: 50
+      note.task/due: 125
+      note.task/status: 100
+      note.tags: 150
+  - type: table
+    name: For Others
+    filters:
+      and:
+        - note["archived"] != true
+        - '!note["task/for"].isEmpty()'
+    order:
+      - archived
+      - file.name
+      - task/priority
+      - task/due
+      - task/status
+      - tags
+      - task/for
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: task/priority
+        direction: DESC
+      - property: task/status
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.task/priority: 50
+      note.task/due: 125
+      note.task/status: 100
+      note.tags: 150
+      note.task/for: 100

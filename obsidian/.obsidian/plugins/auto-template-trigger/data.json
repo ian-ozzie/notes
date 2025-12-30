@@ -7,6 +7,10 @@
     {
       "folderPath": "bases/bookmarks",
       "templateName": "bookmark"
+    },
+    {
+      "folderPath": "bases/tasks",
+      "templateName": "task"
     }
   ],
   "disablePrompt": true,
