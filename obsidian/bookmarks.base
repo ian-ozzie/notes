@@ -1,0 +1,165 @@
+create:
+  path: bases/bookmarks
+  name: datetime:YYYY-MM-DD_HH-mm-ss
+  template: bookmark
+filters:
+  and:
+    - type == "bookmark"
+    - file.name != "bookmark"
+properties:
+  note.archived:
+    displayName: archived
+  note.title:
+    displayName: title
+  note.bookmark/link:
+    displayName: link
+  note.bookmark/price:
+    displayName: price
+  note.bookmark/remind_at:
+    displayName: remind_at
+  note.bookmark/tags:
+    displayName: tags
+  note.bookmark/feed/update:
+    displayName: feed update
+  note.bookmark/feed/url:
+    displayName: feed url
+views:
+  - type: table
+    name: Not Archived
+    filters:
+      and:
+        - note["archived"] != true
+    order:
+      - archived
+      - file.name
+      - bookmark/link
+      - focus
+      - bookmark/tags
+      - bookmark/remind_at
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.bookmark/link: 100
+      note.focus: 100
+      note.bookmark/tags: 150
+      note.bookmark/remind_at: 125
+  - type: table
+    name: All
+    order:
+      - archived
+      - file.name
+      - bookmark/link
+      - focus
+      - bookmark/tags
+      - bookmark/remind_at
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.path
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.bookmark/link: 100
+      note.focus: 100
+      note.bookmark/tags: 150
+      note.bookmark/remind_at: 125
+  - type: table
+    name: Reminders
+    filters:
+      and:
+        - note["archived"] != true
+        - note["bookmark/remind_at"] < now()
+    order:
+      - archived
+      - file.name
+      - bookmark/link
+      - bookmark/tags
+      - bookmark/remind_at
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: bookmark/remind_at
+        direction: DESC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.bookmark/link: 100
+      note.bookmark/tags: 150
+      note.bookmark/remind_at: 125
+  - type: table
+    name: Wishlist
+    filters:
+      and:
+        - note["archived"] != true
+        - note["bookmark/tags"] == "wishlist"
+    order:
+      - archived
+      - file.name
+      - bookmark/link
+      - bookmark/tags
+      - bookmark/price
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.bookmark/link: 100
+      note.bookmark/tags: 150
+      note.bookmark/price: 100
+  - type: table
+    name: Feeds
+    filters:
+      and:
+        - note["archived"] != true
+        - '!note["bookmark/feed/url"].isEmpty()'
+    order:
+      - archived
+      - focus
+      - bookmark/feed/update
+      - bookmark/tags
+      - bookmark/feed/url
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      note.focus: 100
+      note.bookmark/feed/update: 100
+      note.bookmark/tags: 150
+      note.bookmark/feed/url: 100

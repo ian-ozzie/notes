@@ -3,6 +3,10 @@
     {
       "folderPath": "/",
       "templateName": "default"
+    },
+    {
+      "folderPath": "bases/bookmarks",
+      "templateName": "bookmark"
     }
   ],
   "disablePrompt": true,
