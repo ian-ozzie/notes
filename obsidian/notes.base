@@ -1,0 +1,175 @@
+filters:
+  and:
+    - file.ext == "md"
+    - '!file.folder.startsWith("bases/")'
+    - file.folder != "templates"
+    - file.name != "scratchpad"
+properties:
+  note.archived:
+    displayName: archived
+  note.title:
+    displayName: title
+views:
+  - type: table
+    name: Not Archived
+    filters:
+      and:
+        - note["archived"] != true
+    order:
+      - archived
+      - file.folder
+      - focus
+      - type
+      - updated
+      - tags
+      - file.name
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: file.path
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.folder: 100
+      note.focus: 100
+      note.type: 100
+      note.updated: 125
+      note.tags: 150
+  - type: table
+    name: All
+    order:
+      - archived
+      - file.folder
+      - focus
+      - type
+      - updated
+      - tags
+      - file.name
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: file.path
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.folder: 100
+      note.focus: 100
+      note.type: 100
+      note.updated: 125
+      note.tags: 150
+  - type: table
+    name: Documentation
+    filters:
+      and:
+        - note["archived"] != true
+        - note["focus"] == "docs"
+    order:
+      - archived
+      - file.folder
+      - focus
+      - type
+      - updated
+      - tags
+      - file.name
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: file.path
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.folder: 100
+      note.focus: 100
+      note.type: 100
+      note.updated: 125
+      note.tags: 150
+  - type: table
+    name: Site Pages
+    filters:
+      and:
+        - note["archived"] != true
+        - note["focus"] == "site"
+    order:
+      - archived
+      - file.folder
+      - focus
+      - type
+      - updated
+      - tags
+      - file.name
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: file.path
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.folder: 100
+      note.focus: 100
+      note.type: 100
+      note.updated: 125
+      note.tags: 150
+  - type: table
+    name: Work
+    filters:
+      and:
+        - note["archived"] != true
+        - note["focus"] == "work"
+    order:
+      - archived
+      - file.folder
+      - focus
+      - type
+      - updated
+      - tags
+      - file.name
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: file.path
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.folder: 100
+      note.focus: 100
+      note.type: 100
+      note.updated: 125
+      note.tags: 150
+  - type: table
+    name: Personal
+    filters:
+      and:
+        - note["archived"] != true
+        - note["focus"] == "personal"
+    order:
+      - archived
+      - file.folder
+      - focus
+      - type
+      - updated
+      - tags
+      - file.name
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: file.path
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.folder: 100
+      note.focus: 100
+      note.type: 100
+      note.updated: 125
+      note.tags: 150
