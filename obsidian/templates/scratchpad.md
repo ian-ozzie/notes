@@ -11,3 +11,7 @@
 ## Tasks
 
 ![Tasks](tasks.base#Due)
+
+## Songs
+
+![Songs](songs.base#Recommended)

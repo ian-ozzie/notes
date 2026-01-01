@@ -9,6 +9,10 @@
       "templateName": "bookmark"
     },
     {
+      "folderPath": "bases/songs",
+      "templateName": "song"
+    },
+    {
       "folderPath": "bases/tasks",
       "templateName": "task"
     }
