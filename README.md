@@ -8,7 +8,7 @@ After seeing the [Pebble Index](https://repebble.com/index) announcement with th
 
 ## Syncing
 
-I use [Syncthing](https://syncthing.net/) to synchronise across platforms I use (currently NixOS/iOS/Android), but I ignore the `.obsidian` folder (this repository fills that gap). My NAS archives any sync changes to give me some history, and now I can just focus on my notes rather than wrangling git and forgetting to commit a note that I needed elsewhere.
+I use [Syncthing](https://syncthing.net/) to synchronise across platforms I use (currently NixOS/iOS/Android), but I ignore the `.obsidian` folder (this repository fills that gap). My NAS archives any sync changes to give me some history, and now I can just focus on my notes rather than wrangling git and forgetting to commit a note that I needed elsewhere. On iOS I use [Sushitrain](https://github.com/pixelspark/sushitrain), and on Android I use [Syncthing-Fork](https://github.com/researchxxl/syncthing-android).
 
 ## Obsidian Bases
 
