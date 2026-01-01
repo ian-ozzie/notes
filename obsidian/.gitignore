@@ -1,12 +1,14 @@
 /*
 
 !/.obsidian
+!/bases
 !/projects
 !/templates
 
 !/.gitignore
 !/README.md
 !/bookmarks.base
+!/commands.base
 !/notes.base
 !/songs.base
 !/tasks.base

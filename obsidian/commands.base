@@ -1,0 +1,57 @@
+create:
+  path: bases/commands
+  name: datetime:YYYY-MM-DD_HH-mm-ss
+  template: command
+filters:
+  and:
+    - type == "command"
+    - file.name != "command"
+properties:
+  note.archived:
+    displayName: archived
+  note.title:
+    displayName: title
+views:
+  - type: table
+    name: Not Archived
+    filters:
+      and:
+        - note["archived"] != true
+    order:
+      - archived
+      - file.name
+      - tags
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.tags: 150
+  - type: table
+    name: All
+    order:
+      - archived
+      - file.name
+      - tags
+      - title
+    sort:
+      - property: archived
+        direction: ASC
+      - property: updated
+        direction: DESC
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.tags: 150

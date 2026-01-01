@@ -9,6 +9,10 @@
       "templateName": "bookmark"
     },
     {
+      "folderPath": "bases/commands",
+      "templateName": "command"
+    },
+    {
       "folderPath": "bases/songs",
       "templateName": "song"
     },
