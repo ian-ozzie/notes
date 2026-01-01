@@ -1,0 +1,39 @@
+// Synced ignore file for things Syncthing shouldn't sync
+
+// Firefox downloads and other things
+*.part
+// Chrom{ium,e} downloads
+*.crdownload
+
+// Temporary / Backup Files
+*~
+.*.sw*
+
+// OS-generated files (macOS)
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+Icon
+
+// OS-generated files (Windows)
+desktop.ini
+ehthumbs.db
+Thumbs.db
+
+// OS-generated files (Synology)
+@eaDir
+
+// Git shouldn't sync
+.git/
+
+// Obsidian, Obsidian trash, scratchpad and bases
+.obsidian/
+.trash/
+scratchpad.md
+bookmarks.base
+commands.base
+notes.base
+songs.base
+tasks.base
