@@ -242,7 +242,7 @@
     "yaml-key-sort": {
       "enabled": true,
       "priority-keys-at-start-of-yaml": true,
-      "yaml-key-priority-sort-order": "title\naliases\nfocus\ntype\ntags\ncreated\nupdated\narchived\ncssclasses\nbookmark/link\nbookmark/tags\nbookmark/remind_at\nbookmark/feed/update\nbookmark/feed/url\ntask/priority\ntask/status\ntask/due\ntask/for",
+      "yaml-key-priority-sort-order": "title\naliases\nfocus\ntype\ntags\ncreated\nupdated\narchived\ncssclasses\nbookmark/link\nbookmark/tags\nbookmark/remind_at\nbookmark/feed/update\nbookmark/feed/url\nsong/artist\nsong/title\nsong/album\nsong/genre\nsong/source\nsong/listened\ntask/priority\ntask/status\ntask/due\ntask/for",
       "yaml-sort-order-for-other-keys": "Ascending Alphabetical"
     },
     "yaml-timestamp": {

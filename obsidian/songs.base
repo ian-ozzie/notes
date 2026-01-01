@@ -1,0 +1,120 @@
+create:
+  path: bases/songs
+  name: datetime:YYYY-MM-DD_HH-mm-ss
+  template: song
+filters:
+  and:
+    - type == "song"
+    - file.name != "song"
+properties:
+  note.archived:
+    displayName: archived
+  note.song/listened:
+    displayName: listened
+  note.song/artist:
+    displayName: artist
+  note.song/title:
+    displayName: title
+  note.song/album:
+    displayName: album
+  note.song/genre:
+    displayName: genre
+  note.song/source:
+    displayName: source
+views:
+  - type: table
+    name: Not Archived
+    filters:
+      and:
+        - note["archived"] != true
+    order:
+      - archived
+      - file.name
+      - song/listened
+      - song/artist
+      - song/title
+      - song/album
+      - song/genre
+      - song/source
+    sort:
+      - property: archived
+        direction: ASC
+      - property: song/artist
+        direction: ASC
+      - property: song/album
+        direction: ASC
+      - property: song/title
+        direction: ASC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.song/listened: 90
+      note.song/artist: 150
+      note.song/title: 150
+      note.song/album: 150
+      note.song/genre: 100
+      note.song/source: 100
+  - type: table
+    name: All
+    order:
+      - archived
+      - file.name
+      - song/listened
+      - song/artist
+      - song/title
+      - song/album
+      - song/genre
+      - song/source
+    sort:
+      - property: archived
+        direction: ASC
+      - property: song/artist
+        direction: ASC
+      - property: song/album
+        direction: ASC
+      - property: song/title
+        direction: ASC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.song/listened: 90
+      note.song/artist: 150
+      note.song/title: 150
+      note.song/album: 150
+      note.song/genre: 100
+      note.song/source: 100
+  - type: table
+    name: Recommended
+    filters:
+      and:
+        - archived != true
+        - '!note["song/source"].isEmpty()'
+        - note["song/source"] != "phone"
+        - note["song/source"] != "shazam"
+    order:
+      - archived
+      - file.name
+      - song/listened
+      - song/artist
+      - song/title
+      - song/album
+      - song/genre
+      - song/source
+    sort:
+      - property: archived
+        direction: ASC
+      - property: song/artist
+        direction: ASC
+      - property: song/album
+        direction: ASC
+      - property: song/title
+        direction: ASC
+    columnSize:
+      note.archived: 50
+      file.name: 100
+      note.song/listened: 90
+      note.song/artist: 150
+      note.song/title: 150
+      note.song/album: 150
+      note.song/genre: 100
+      note.song/source: 100
